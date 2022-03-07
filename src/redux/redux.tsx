@@ -3,7 +3,7 @@ import { Hello } from "../components/hello"
 import { World } from "../components/world"
 import { Home } from "../pages/home"
 
-export enum Permisisons {
+export enum Permissions {
   PERMISSION_HELLO = 'PERMISSION_HELLO',
   PERMISSION_WORLD = 'PERMISSION_WORLD',
   PERMISSION_HOME = 'PERMISSION_HOME',
@@ -12,41 +12,41 @@ export enum Permisisons {
 
 export interface ConfigPermissions {
   auth: boolean
-  permission: Permisisons
+  permission: Permissions
   path: string
   component: ReactElement
 }
 
 interface TypeState {
   privateRouteConfig: Array<ConfigPermissions>
-  permissions: Array<Permisisons>
+  permissions: Array<Permissions>
 }
 
 export const state: TypeState = {
   privateRouteConfig: [
     {
       auth: true,
-      permission: Permisisons.PERMISSION_HELLO,
+      permission: Permissions.PERMISSION_HELLO,
       path: '/hello',
       component: <Hello />
     },
     {
       auth: true,
-      permission: Permisisons.PERMISSION_HOME,
+      permission: Permissions.PERMISSION_HOME,
       path: '/home',
       component: <Home />
     },
     {
       auth: true,
-      permission: Permisisons.PERMISSION_WORLD,
+      permission: Permissions.PERMISSION_WORLD,
       path: '/world',
       component: <World />
     }
   ],
   permissions: [
-    Permisisons.PERMISSION_HELLO,
-    Permisisons.PERMISSION_HOME,
-    Permisisons.PERMISSION_WORLD,
-    Permisisons.PERMISSION_LOGIN
+    Permissions.PERMISSION_HELLO,
+    Permissions.PERMISSION_HOME,
+    Permissions.PERMISSION_WORLD,
+    Permissions.PERMISSION_LOGIN
   ]
 }

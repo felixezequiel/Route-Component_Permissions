@@ -1,9 +1,9 @@
 import { isFree } from "../context/context"
-import { Permisisons } from "../redux/redux"
+import { Permissions } from "../redux/redux"
 
 interface PropsPrivateComponent {
   children: JSX.Element
-  permission: Permisisons
+  permission: Permissions
 }
 
 export const PrivateComponent = ({ children, permission }: PropsPrivateComponent) => {

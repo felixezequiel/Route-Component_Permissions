@@ -1,9 +1,9 @@
 import { PrivateComponent } from "../private/privateComponent";
-import { Permisisons } from "../redux/redux";
+import { Permissions } from "../redux/redux";
 
 export const World = () => (
   <PrivateComponent
-    permission={Permisisons.PERMISSION_WORLD}
+    permission={Permissions.PERMISSION_WORLD}
   >
     <span>world</span>
   </PrivateComponent>
